@@ -42,8 +42,8 @@ public class MainActivity extends Activity
     private String aadhaar_Send=null;
     private String email_Send=null;
     private String phone_Send=null;
-    private String occupationsend=null;
-    private String sendingmobilesend = null;
+    private String occupationsend="";
+    private String sendingmobilesend = "0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,7 +133,7 @@ public class MainActivity extends Activity
                  * Phone Number
                  * Message
                  */
-                sendSMS("51969",DataSend);
+                sendSMS("",DataSend);
                 dialog.dismiss();
             }
         });
@@ -231,6 +231,11 @@ public class MainActivity extends Activity
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
+    private void clearData() {
+        et_Aadhaar.setText("");
+        et_Mobile.setText("");
+        et_email.setText("");
+    }
 
     class SendData extends AsyncTask<String,String,String>{
 
@@ -248,7 +253,7 @@ public class MainActivity extends Activity
         protected String doInBackground(String... param) {
 
             try {
-                url=new URL("http://10.241.9.72/eservice/mobileseed");
+                url=new URL("");
                 conn = (HttpURLConnection)url.openConnection();
                 conn.setDoOutput(true);
                 conn.setRequestMethod("POST");
@@ -259,13 +264,13 @@ public class MainActivity extends Activity
                 conn.connect();
 
                 JSONStringer userJson = new JSONStringer()
-                        .object().key("Mobile_Seed")
+                        .object().key("")
                         .object()
-                        .key("AadhaarNo").value(param[0])
-                        .key("MobileNo").value(param[1])
-                        .key("Email").value(param[2])
-                        .key("Occupation").value(param[3])
-                        .key("SendingMobileNo").value(param[4])
+                        .key("").value(param[0])
+                        .key("").value(param[1])
+                        .key("").value(param[2])
+                        .key("").value(param[3])
+                        .key("").value(param[4])
                         .endObject()
                         .endObject();
 
@@ -310,21 +315,24 @@ public class MainActivity extends Activity
             dialog.dismiss();
             Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
 
-           /* JsonParser JP = new JsonParser();
-            String finalResult = JP.POST(result);
+            JsonParser JP = new JsonParser();
+            String finalResult = JP.POST(s);
 
-            if(finalResult.equals(Constants.DATASENT)){
+            if(finalResult.equals("")){
                 clearData();
+                Log.d("Success Message is",finalResult);
                 dialog.dismiss();
                 Toast.makeText(getApplicationContext(), finalResult, Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(MainActivity.this,Home.class);
-                startActivity(i);
-                MainActivity.this.finish();
+               // Intent i = new Intent(MainActivity.this,MainActivity.class);
+              //  startActivity(i);
+               // MainActivity.this.finish();
             }
             else{
                 dialog.dismiss();
+                Log.d("Error is",finalResult);
                 Toast.makeText(getApplicationContext(), finalResult, Toast.LENGTH_SHORT).show();
-            }*/
+            }
+
         }
     }
 }
