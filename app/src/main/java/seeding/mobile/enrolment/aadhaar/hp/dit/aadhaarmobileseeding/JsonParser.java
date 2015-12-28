@@ -16,7 +16,7 @@ public class JsonParser {
             Object json = new JSONTokener(s).nextValue();
             if (json instanceof JSONObject) {
                 JSONObject obj = new JSONObject(s);
-                g_Table = obj.optString("");
+                g_Table = obj.optString("AadhaarSeedMobileResult");
                 return g_Table;
             } else {
                 return null;

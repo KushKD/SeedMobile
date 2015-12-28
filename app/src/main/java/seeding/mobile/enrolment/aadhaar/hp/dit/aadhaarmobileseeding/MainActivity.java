@@ -133,7 +133,7 @@ public class MainActivity extends Activity
                  * Phone Number
                  * Message
                  */
-                sendSMS("",DataSend);
+                sendSMS("51969",DataSend);
                 dialog.dismiss();
             }
         });
@@ -253,7 +253,7 @@ public class MainActivity extends Activity
         protected String doInBackground(String... param) {
 
             try {
-                url=new URL("");
+                url=new URL("http://10.241.9.72/eservice/AWW.svc/mobileseed");
                 conn = (HttpURLConnection)url.openConnection();
                 conn.setDoOutput(true);
                 conn.setRequestMethod("POST");
@@ -264,13 +264,13 @@ public class MainActivity extends Activity
                 conn.connect();
 
                 JSONStringer userJson = new JSONStringer()
-                        .object().key("")
+                        .object().key("Mobile_Seed")
                         .object()
-                        .key("").value(param[0])
-                        .key("").value(param[1])
-                        .key("").value(param[2])
-                        .key("").value(param[3])
-                        .key("").value(param[4])
+                        .key("AadhaarNo").value(param[0])
+                        .key("MobileNo").value(param[1])
+                        .key("Email").value(param[2])
+                        .key("Occupation").value(param[3])
+                        .key("SendingMobileNo").value(param[4])
                         .endObject()
                         .endObject();
 
@@ -318,7 +318,7 @@ public class MainActivity extends Activity
             JsonParser JP = new JsonParser();
             String finalResult = JP.POST(s);
 
-            if(finalResult.equals("")){
+            if(finalResult.equals("Data Sent Successfully")){
                 clearData();
                 Log.d("Success Message is",finalResult);
                 dialog.dismiss();
