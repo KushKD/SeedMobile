@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_weight="6"
+    android:orientation="vertical"
     tools:context="seeding.mobile.enrolment.aadhaar.hp.dit.aadhaarmobileseeding.MainActivity">
 
 
@@ -13,19 +13,19 @@
         <LinearLayout
             android:id="@+id/ll1"
             android:layout_width="match_parent"
-            android:orientation="vertical"
             android:layout_height="match_parent"
-            android:layout_weight="2.5" >
+            android:layout_weight="2.5"
+            android:orientation="vertical" >
         </LinearLayout>
 
     <!-- Body -->
         <LinearLayout
             android:id="@+id/ll2"
             android:layout_width="match_parent"
-            android:orientation="vertical"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#30656565">
+            android:background="#30656565"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/etaadhaar"
@@ -64,10 +64,10 @@
 
         <LinearLayout
             android:id="@+id/ll3"
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2.5" >
+            android:layout_weight="2.5"
+            android:orientation="vertical" >
         </LinearLayout>
 
     </LinearLayout>

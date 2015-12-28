@@ -33,6 +33,9 @@ import java.net.URL;
 public class MainActivity extends Activity
 {
 
+    URL url;
+    HttpURLConnection conn;
+    StringBuilder sb = new StringBuilder();
     private Boolean initailize = false;
     private EditText et_Aadhaar,et_Mobile, et_email;
     private Button bt_Submit;
@@ -41,9 +44,6 @@ public class MainActivity extends Activity
     private String phone_Send=null;
     private String occupationsend=null;
     private String sendingmobilesend = null;
-    URL url;
-    HttpURLConnection conn;
-    StringBuilder sb = new StringBuilder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -228,11 +228,7 @@ public class MainActivity extends Activity
     protected boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(MainActivity.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        } else {
-            return false;
-        }
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
 
@@ -273,7 +269,7 @@ public class MainActivity extends Activity
                         .endObject()
                         .endObject();
 
-                   //Testing to be done
+
 
                 System.out.println(userJson.toString());
                 OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream());
