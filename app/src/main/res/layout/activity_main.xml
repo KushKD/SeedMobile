@@ -25,33 +25,188 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#30656565"
+            android:gravity="center|center_horizontal|center_vertical"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/etaadhaar"
-                android:layout_width="match_parent"
+            <!-- Relative LAyout Goes Here -->
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Aadhaar Number"
-                android:inputType="number"
-                android:maxLength="12"
-                />
+                android:orientation="horizontal"
+                android:padding="5dip" >
 
-            <EditText
-                android:id="@+id/etphone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Phone Number"
-                android:inputType="number"
-                android:maxLength="10"
-                />
+                <!-- ListRow Left sied Thumbnail image -->
 
-            <EditText
-                android:id="@+id/etemail"
-                android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/thumbnail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="3dip"
+                    android:padding="3dip" >
+
+
+                    <ImageView
+                        android:id="@+id/list_image"
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:layout_gravity="top"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/ic_launcher" />
+
+                </LinearLayout>
+
+                <!-- Rightend Arrow -->
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/ic_launcher" />
+
+
+
+
+
+
+                <EditText
+                    android:id="@+id/etaadhaar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tvCity"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="70dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_toLeftOf="@+id/imageView1"
+                    android:hint="Enter Aadhaar Number"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:textSize="20dip" />
+
+            </RelativeLayout>
+
+
+            <!-- Phone No -->
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Email"
-                android:inputType="textEmailAddress"
-                />
+                android:orientation="horizontal"
+                android:padding="5dip" >
+
+                <!-- ListRow Left sied Thumbnail image -->
+
+                <LinearLayout
+                    android:id="@+id/thumbnail2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="3dip"
+                    android:padding="3dip" >
+
+
+                    <ImageView
+                        android:id="@+id/list_image2"
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:layout_gravity="top"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/ic_launcher" />
+
+                </LinearLayout>
+
+                <!-- Rightend Arrow -->
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/ic_launcher" />
+
+
+
+
+
+
+                <EditText
+                    android:id="@+id/etphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tvCity"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="70dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_toLeftOf="@+id/imageView12"
+                    android:hint="Enter Phone Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="20dip" />
+
+            </RelativeLayout>
+
+
+            <!-- Email No -->
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dip" >
+
+                <!-- ListRow Left sied Thumbnail image -->
+
+                <LinearLayout
+                    android:id="@+id/thumbnail3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="3dip"
+                    android:padding="3dip" >
+
+
+                    <ImageView
+                        android:id="@+id/list_image3"
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:layout_gravity="top"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/ic_launcher" />
+
+                </LinearLayout>
+
+                <!-- Rightend Arrow -->
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/ic_launcher" />
+
+
+
+
+
+
+                <EditText
+                    android:id="@+id/etemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tvCity"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="70dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_toLeftOf="@+id/imageView13"
+                    android:hint="Enter Email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="20dip" />
+
+            </RelativeLayout>
+
+
 
             <Button
                 android:id="@+id/submit"
