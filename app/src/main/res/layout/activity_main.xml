@@ -15,7 +15,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
+            android:background="#a01d29"
             android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Aadhaar Mobile Seeding"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+
+                />
         </LinearLayout>
 
     <!-- Body -->
@@ -24,14 +36,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#30656565"
             android:gravity="center|center_horizontal|center_vertical"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="vertical">
 
             <!-- Relative LAyout Goes Here -->
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center|center_vertical|center_horizontal"
                 android:orientation="horizontal"
                 android:padding="5dip" >
 
@@ -46,25 +67,26 @@
                     android:padding="3dip" >
 
 
-                    <ImageView
+                    <Button
                         android:id="@+id/list_image"
-                        android:layout_width="60dip"
-                        android:layout_height="60dip"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="top"
-                        android:contentDescription="@string/app_name"
-                        android:src="@mipmap/ic_launcher" />
+                        android:background="@drawable/aadhaar"
+                        android:contentDescription="@string/app_name" />
 
                 </LinearLayout>
 
                 <!-- Rightend Arrow -->
-                <ImageView
+                <ImageButton
                     android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:background="@drawable/circularbutton"
                     android:contentDescription="@string/app_name"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/speaker" />
 
 
 
@@ -77,21 +99,36 @@
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/tvCity"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="70dip"
-                    android:layout_marginRight="20dip"
+                    android:layout_marginLeft="60dip"
+                    android:layout_marginRight="10dip"
                     android:layout_toLeftOf="@+id/imageView1"
+                    android:background="@drawable/rounded_edittext"
                     android:hint="Enter Aadhaar Number"
                     android:inputType="number"
                     android:maxLength="12"
+                    android:textColor="#a01d29"
+                    android:textColorHint="#a01d29"
                     android:textSize="20dip" />
 
             </RelativeLayout>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="vertical">
 
 
             <!-- Phone No -->
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center|center_vertical|center_horizontal"
                 android:orientation="horizontal"
                 android:padding="5dip" >
 
@@ -106,25 +143,26 @@
                     android:padding="3dip" >
 
 
-                    <ImageView
+                    <Button
                         android:id="@+id/list_image2"
-                        android:layout_width="60dip"
-                        android:layout_height="60dip"
+                        android:layout_width="40dp"
+                        android:layout_height="60dp"
                         android:layout_gravity="top"
-                        android:contentDescription="@string/app_name"
-                        android:src="@mipmap/ic_launcher" />
+                        android:background="@drawable/mobile"
+                        android:contentDescription="@string/app_name" />
 
                 </LinearLayout>
 
                 <!-- Rightend Arrow -->
-                <ImageView
+                <ImageButton
                     android:id="@+id/imageView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:background="@drawable/circularbutton"
                     android:contentDescription="@string/app_name"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/speaker" />
 
 
 
@@ -137,21 +175,36 @@
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/tvCity"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="70dip"
-                    android:layout_marginRight="20dip"
+                    android:layout_marginLeft="60dip"
+                    android:layout_marginRight="10dip"
                     android:layout_toLeftOf="@+id/imageView12"
+                    android:background="@drawable/rounded_edittext"
                     android:hint="Enter Phone Number"
                     android:inputType="number"
                     android:maxLength="10"
+                    android:textColor="#a01d29"
+                    android:textColorHint="#a01d29"
                     android:textSize="20dip" />
 
             </RelativeLayout>
+                </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="vertical">
 
 
             <!-- Email No -->
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center|center_vertical|center_horizontal"
                 android:orientation="horizontal"
                 android:padding="5dip" >
 
@@ -166,25 +219,26 @@
                     android:padding="3dip" >
 
 
-                    <ImageView
+                    <Button
                         android:id="@+id/list_image3"
-                        android:layout_width="60dip"
-                        android:layout_height="60dip"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="top"
-                        android:contentDescription="@string/app_name"
-                        android:src="@mipmap/ic_launcher" />
+                        android:background="@drawable/email"
+                        android:contentDescription="@string/app_name" />
 
                 </LinearLayout>
 
                 <!-- Rightend Arrow -->
-                <ImageView
+                <ImageButton
                     android:id="@+id/imageView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:background="@drawable/circularbutton"
                     android:contentDescription="@string/app_name"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/speaker" />
 
 
 
@@ -197,23 +251,22 @@
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/tvCity"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="70dip"
-                    android:layout_marginRight="20dip"
+                    android:layout_marginLeft="60dip"
+                    android:layout_marginRight="10dip"
                     android:layout_toLeftOf="@+id/imageView13"
+                    android:background="@drawable/rounded_edittext"
                     android:hint="Enter Email"
                     android:inputType="textEmailAddress"
+                    android:textColor="#a01d29"
+                    android:textColorHint="#a01d29"
                     android:textSize="20dip" />
 
             </RelativeLayout>
+                </LinearLayout>
 
 
 
-            <Button
-                android:id="@+id/submit"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Submit"/>
+
 
         </LinearLayout>
 
@@ -222,7 +275,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:orientation="vertical" >
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:background="#a01d29"
+                android:text="Submit"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
         </LinearLayout>
 
     </LinearLayout>
