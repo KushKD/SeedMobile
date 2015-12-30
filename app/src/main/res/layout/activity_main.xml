@@ -244,7 +244,14 @@
             </RelativeLayout>
 
 
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#40666666"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:padding="15dip"
+                android:text="Background Messages"
+                android:textColor="#a01d29"/>
 
 
 
@@ -256,46 +263,54 @@
             android:layout_height="match_parent"
             android:layout_weight="2.5"
             android:background="#F2F2F2"
-            android:gravity="center|center_horizontal|center_vertical"
             android:orientation="vertical">
 
-          <!--  <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center|center_vertical|center_horizontal"
-                android:text="Background Messages"/>-->
-
-            <LinearLayout
-                android:id="@+id/ll31"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|center_horizontal|center_vertical"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:weightSum="2" >
 
 
-                    <TextView
-                        android:layout_width="270px"
-                        android:layout_height="168px"
-                        android:background="@drawable/footer_aadhaar"/>
+          <!--  -->
 
 
-                  <Button
-                      android:id="@+id/submit"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:background="#a01d29"
-                      android:text="Submit"
-                      android:textColor="#FFFFFF"
-                      android:textStyle="bold"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="left|center_horizontal|center_vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/aadhaarlogo"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#a01d29"
+        android:text="Send"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+        </LinearLayout>
+
+</LinearLayout>
 
 
-
-
-
-
-            </LinearLayout>
 
         </LinearLayout>
 
