@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Aadhaar Mobile Seeding</string>
+    <string name="title_activity_go_to_mobile_seed">GoToMobileSeed</string>
+    <string name="orange">Orange</string>
+    <string name="blue">BLUE</string>
+    <string name="red">RED</string>
 </resources>
